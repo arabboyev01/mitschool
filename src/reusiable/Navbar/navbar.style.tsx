@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
         background: "rgb(38, 187, 78)",
     },
     navbarContentWrapper: {
+        position: "relative",
         maxWidth: "1320px",
         margin: "0 auto",
         display: "flex",
@@ -13,6 +14,9 @@ export default makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "space-between",
         padding: "20px 0",
+        '@media(max-width: 720px)': {
+            padding: "20px",
+        }
     },
     Logo: {
         display: "flex",
@@ -33,24 +37,42 @@ export default makeStyles((theme) => ({
         display:"flex",
         flexDirection: "row",
         alignItems: "center",
-        '@media(max-width: 560px)': {
+        '@media(max-width: 720px)': {
             display: "none",
         },
     },
     collapsedMobile: {
-        '@media(max-width: 560px)': {
-            display: "block",
+        position: "absolute",
+        top: "100px",
+        right: 0,
+        width: "100%",
+        background: "rgb(38, 187, 78)",
+        '@media(max-width: 720px)': {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "start",
+            paddingLeft: "50px",
+            paddingBottom: "20px",
         },
     },
     navItem: {
         marginRight: "50px",
+        color: "#fff",
+        fontSize: "16px",
+        fontWeight: 600,
+        lineHeight: "24px",
         '&:last-of-type':{
             marginRight: "0px",
+        },
+        '@media(max-width: 720px)': {
+            fontSize: "18px",
+            marginRight: "0px",
+            paddingBottom: "20px",
         },
     },
     hamburger: {
         display: "none",
-        '@media(max-width: 560px)': {
+        '@media(max-width: 720px)': {
             display: "block",
         },
     },
